@@ -1,0 +1,12 @@
+{
+  "name": "suffix-loader",
+  "version": "0.0.1",
+  "author": "viowan",
+  "description": "suffix loader module for webpack",
+  "devDependencies": {
+  },
+  "license": "MIT",
+  "dependencies": {
+    "loader-utils": "^0.2.7"
+  }
+}
