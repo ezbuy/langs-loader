@@ -7,6 +7,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "loader-utils": "^0.2.7"
+    "loader-utils": "^0.2.7",
+    "po2json": ">=0.4.0"
   }
 }
