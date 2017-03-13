@@ -31,6 +31,7 @@ module.exports = function(source) {
 				var fileCode = getFileCode(files[i]);
 				if(typeof fileCode !== "undefined"){
 					var filePath = path.join(resourceDir,fileName);
+					this.addDependency(filePath);
 					jsonData[fileCode] = po2json.parse(fs.readFileSync(filePath),options);
 				}
 			}
