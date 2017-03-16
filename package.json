@@ -1,8 +1,8 @@
 {
-  "name": "suffix-loader",
+  "name": "langs-loader",
   "version": "0.0.1",
   "author": "viowan",
-  "description": "suffix loader module for webpack",
+  "description": "langs loader for pot files",
   "devDependencies": {
   },
   "license": "MIT",
