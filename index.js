@@ -12,7 +12,7 @@ var getFileCode = (filename) => {
 module.exports = function(source) {
 	this.cacheable && this.cacheable();
 	var resourcePath = this.resourcePath;
-	var options = loaderUtils.parseQuery(this.query);
+	var options = loaderUtils.getOptions(this);
 
 	if(typeof options.code !== "undefined" || (typeof options.isLoadAll !== "undefined" && options.isLoadAll)){
 		var resourceDir = path.dirname(resourcePath);
