@@ -16,15 +16,16 @@ module.exports = function(source) {
 
 	if(typeof options.code !== "undefined" || (typeof options.isLoadAll !== "undefined" && options.isLoadAll)){
 		var resourceDir = path.dirname(resourcePath);
+		var resourceFileNameNoExt = path.basename(resourcePath,path.extname(resourcePath));
 
 		if(typeof options.code !== "undefined"){
-			var poPathname = path.join(resourceDir,path.basename(resourcePath,path.extname(resourcePath)))+"."+options.code+".po";
+			var poPathname = path.join(resourceDir, resourceFileNameNoExt)+"."+options.code+".po";
 			return po2json.parse(fs.readFileSync(poPathname),options);
 		}
 
 		if (typeof options.isLoadAll !== "undefined" && options.isLoadAll) {
 			var jsonData = {allResources: true};
-			files = fs.readdirSync(resourceDir).filter((path)=>path.endsWith(".po"));
+			files = fs.readdirSync(resourceDir).filter((path)=>(path.endsWith(".po") && path.startsWith(resourceFileNameNoExt+".")));
 
 			for(var i=0;i<files.length;i++){
 				var fileName = files[i];

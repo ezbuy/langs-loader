@@ -1,6 +1,6 @@
 {
   "name": "langs-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "viowan",
   "description": "langs loader for pot files",
   "devDependencies": {},
